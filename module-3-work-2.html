@@ -1,0 +1,55 @@
+
+ 
+
+<!DOCTYPE HTML>
+<!--
+	Forty by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Module 3: Assignment 2</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<a href="index.html" class="logo"><strong>Rich</strong> <span>Orrell</span></a>
+						<nav>
+							<a href="#menu">Menu</a>
+						</nav>
+					</header>
+
+			<!-- Main -->
+				<div id="main" class="alt">
+
+										<!-- One -->
+											<section id="one">
+												<div class="inner">
+													<header class="major">
+														<h1>Programming language concepts</h1>
+													</header>
+
+													<!-- Content -->
+
+														<div class="col-6 col-12-medium">
+															<h2 id="content">Assignment brief</h2>
+															<p>This unit focused on regular expressions and recursion in software solutions, and their affect on system security. I was asked to provide answers to the following questions: <br>1. What is ReDOS and what part do ‘Evil Regex’ play?<br>2. What are the common problems associated with the use of regex? How can these be mitigated?<br>3. How and why could regex be used as part of a security solution?</p>
+														</div>
+
+														<div class="col-6 col-12-medium">
+															<div class="row">
+																<h3>Work submission</h3>
+																<p>   Regular expressions allow a way to search through and process strings, and allow for validating and processing of that data. They are used by a number of different frameworks, such as being .NET's default validation method. Regular expression Denial of Service (ReDoS) is a form of DoS attack which specifically targets regular expressions by exploiting the fact that input size has an exponential impact on the performance of a query. More complex expressions can be maliciously crafted to paralyse applications. Evil regex refers to the specific regular expressions that are crafted to cause a ReDoS attack. They are defined by OWASP as containing groupings with repetition, and additional repetition and alternation with overlapping inside of the groups</p>
+																<p>   Regex can be a powerful method of searching and processing large amounts of data, however it is not without its weaknesses. These weaknesses include:<br>- Expressions are compiled at runtime, meaning it cannot provide feedback on potential errors.<br>- Performance can be impacted when a query has to be processed in quadratic time (this is what makes ReDoS attacks possible).<br>- They can be vulnerable to injection attacks.<br>These weaknesses can be mitigated by the following:<br>- Using specific libraries and tools which are designed to handle regex securely.<br>- Implementing code to sanitise and validate inputs.<br>- Ensuring expressions are carefully crafted and appropriately tested before being pushed live.</p>												
+																<p>Security solutions rely on being able to reliably spot an unwanted connection or injection, as well as being able to reliably find relevant information within system logs. Both of these use cases are very suitable for regex. Regex can be harnessed to validate inputs entered by users, and can powerfully determine what inputs are suitable based on a single expression. They can also be used to specify firewall rules by blocking connections based on key expressions.</p>
+															</div>		
+														</div>
