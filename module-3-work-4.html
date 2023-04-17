@@ -1,0 +1,68 @@
+
+ 
+
+<!DOCTYPE HTML>
+<!--
+	Forty by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Module 3: Assignment 4</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<a href="index.html" class="logo"><strong>Rich</strong> <span>Orrell</span></a>
+						<nav>
+							<a href="#menu">Menu</a>
+						</nav>
+					</header>
+
+			<!-- Main -->
+				<div id="main" class="alt">
+
+										<!-- One -->
+											<section id="one">
+												<div class="inner">
+													<header class="major">
+														<h1>Coding exercise: Buffer Overflow</h1>
+													</header>
+
+													<!-- Content -->
+
+															<h2 id="content">Assignment brief</h2>
+															<p>Python programming exercise looking at buffer overflow in C and Python</p>
+
+															<div class="col-6 col-12-medium">
+																<h3>Submission</h3>
+																<p></p>
+																<pre><code>
+#include &lt;stdio.h&gt;<br>
+int main(int argc, char **argv)
+{
+char buf[8]; // buffer for eight characters
+printf("enter name:"); 
+gets(buf); // read from stdio (sensitive function!)
+printf("%s\n", buf); // print out data stored in buf
+return 0; // 0 as return value
+{</code></pre>
+																<p><b>C script: What happens?</b><br>*** stack smashing detected ***<br>Aborted (core dumped)</p>
+																<p><b>What does the output message mean?</b><br>A stack refers to a stack of functions in a program. Stack smashing generally refers to an overload of data causing part of a stack to overwrite another part of the stack. This can be local or from an external source. In this instance, it is caused by entering too many characters, causing the stack to corrupt. </p>
+																<pre><code>
+buffer=[None]*10
+for i in range (0,11):
+buffer[i]=7
+print(buffer)
+</code></pre>
+																<p><b>Python script: resuts</b><br>When running the script it returns a syntax error with:<br>pylint Overflow.py.<br>The only information it gives is that there is a SyntaxError at line 1.<br>When running with Pylint it gives more details on the error.<br>Overflow.py:1:15: E0001 invalid syntax<br>This indicates that the error is in line 1, character 15, and that it is error 0001</p>
+															</div>		
