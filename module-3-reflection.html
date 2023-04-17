@@ -1,0 +1,50 @@
+
+ 
+
+<!DOCTYPE HTML>
+<!--
+	Forty by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Module 3: Reflection</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<a href="index.html" class="logo"><strong>Rich</strong> <span>Orrell</span></a>
+						<nav>
+							<a href="#menu">Menu</a>
+						</nav>
+					</header>
+
+			<!-- Main -->
+				<div id="main" class="alt">
+
+										<!-- One -->
+											<section id="one">
+												<div class="inner">
+													<header class="major">
+														<h1>Development Team Project: Reflection</h1>
+													</header>
+
+													<!-- Content -->
+
+															<p>For the Secure Software Development team project, my team chose to create a web application for a cybersecurity office to be able to track cases and log details. It also featured a portal for members of the public to be able to log new cases and track the progress of their cases. We chose this because it was a concept which we all understood and were comfortable working on. It was my first experience creating an application in a team, so I was unsure of how to approach the planning of the project at first, but it soon became very natural after having regular contact and communication with the rest of the team</p>
+															<p>This type of application will naturally be storing a lot of private and confidential data. For this reason, it was crucial to manage the security risks and put systems in place to secure the data and systems. One of the first things we implemented was data encryption. The cryptography library was used to encrypt and decrypt any private data in the MySQL database. It was very important to keep the MySQL database secure as well, as that is where all the data is stored. An IP address whitelist was used to only allow traffic from specified sources, and only one account was given full database ownership to further reduce the chance of a security breach.</p>
+															<p>One of the main components which we were keen to include in our design is an audit of data changes in the database. I elected to implement this in the database itself rather than in the Python application, as it is a more reliable way of auditing changes as it cannot be impacted by a connection loss. I implemented this using triggers on each of the tables we wanted to audit. Separate triggers were used for INSERT, UPDATE, and DELETE, but they all reported back to the same audit table. This was very important to implement correctly from a security standpoint, as it provides details of which user made each change at what time and reports the old and new values for the column, meaning any changes can be easily reverted if required.</p>
+															<p>We made several changes to the final version from what we proposed in our initial design document. One of these was to use MySQL for the database software rather than SQLite. The reason for this was that SQLite has only very basic features, with no automation tools such as stored procedures or triggers. I initially tried to implement an SQL Server database in Azure, however I ran into compatibility issues when deploying the application to the Azure web app. This is because the web app ran on a Linux server, and SQL Server is only compatible with Windows systems. MySQL has much broader compatibility, so it was used instead. </p>
+															<p>Working on this project with a team presented some unique challenges and benefits. As a team we had to ensure our communication was very clear and that we were agreeing regular meeting times to discuss the work we were doing. This was important to ensure no work was being duplicated, and to ensure that compatibility was consistent throughout. Finding times to meet regularly was a challenge as the team spanned three different time zones. It was important to make sure the work was allocated fairly and in a way which catered to everyone’s strengths and interests. I have a background in database management and Microsoft Azure, so I was keen to help the team with this aspect of the work. </p>
+															<p>	One of the biggest hurdles for me with this project was compatibility. I did not anticipate having so many issues with finding Python libraries and external systems to work between the Python code, database, and hosting platform. I started work on a Mac with an M2 processor, but soon found that several Python libraries were not compatible with Apple silicon, so I needed to transfer over to a Windows device. However, once a script was working locally it needed to be sanitised ready to be loaded onto the Azure Linux web app. Fortunately, I found that updating the app through GitHub was very quick and so I was able to troubleshoot effectively. </p>
+															<p>In conclusion I learnt a lot in this module about working in a team on a software project. I found it was most crucial to clearly define roles early on so everyone can make their own goals to work towards and ensure that all parts of the project are covered. It also allows everyone to have their own specialty in the project so that if any issues arise then there will likely be someone with the experience to fix it. I also enhanced my technical knowledge and experience in this project, and I am looking forward to using these acquired skills in future work.</p>
+														
